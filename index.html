@@ -1346,17 +1346,30 @@
           action="https://formspree.io/f/mldlydep"
           method="POST"
         >
-          <label class="popup-text">Ваш телефон</label>
-          <input type="tel" name="phone" required placeholder="+380123456789" />
-
-          <label class="popup-text">Ник в Telegram</label>
-          <input type="text" name="telegram" required placeholder="@username" />
-
+          <div>
+            <label class="popup-text">Ваш телефон</label>
+            <input
+              type="tel"
+              name="phone"
+              required
+              placeholder="+380123456789"
+            />
+          </div>
+          <div>
+            <label class="popup-text">Ник в Telegram</label>
+            <input
+              type="text"
+              name="telegram"
+              required
+              placeholder="@username"
+            />
+          </div>
           <button class="button-submit" type="submit">Отправить заявку</button>
         </form>
       </div>
     </div>
     <script src="./src/script.js"></script>
     <script src="./src/popup.js"></script>
+    <script src="./src/telegram.js"></script>
   </body>
 </html>

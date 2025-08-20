@@ -1159,7 +1159,7 @@ table {
 }
 
 .popup-content {
-  border: 2px solid #66103f6e;
+  border: 2px solid #000000bf;
 
   background: #f6a4d3;
   color: #36021f;
@@ -1177,7 +1177,7 @@ table {
   right: 15px;
   font-size: 22px;
   font-weight: bold;
-  color: #36021f;
+  color: #fff;
   cursor: pointer;
 }
 
@@ -1192,13 +1192,19 @@ table {
 }
 
 .popup-content {
-  background: #f6a4d3;
-  color: #36021f;
+  background: #fff;
+  color: #8b8b8b;
   padding: 20px;
   border-radius: 15px;
   width: 300px;
   position: relative;
   text-align: left;
+  height: 400px;
+}
+@media screen and (max-width: 360px) {
+  .popup-content {
+    width: 270px;
+  }
 }
 
 .close {
@@ -1207,11 +1213,11 @@ table {
   right: 20px;
   font-size: 30px;
   cursor: pointer;
-  color: #36021f;
+  color: #000;
   transition: 0.2s;
 }
 .close:hover {
-  color: #5e354c;
+  color: #000000af;
   transition: 0.2s;
 }
 
@@ -1220,19 +1226,37 @@ table {
   width: 100%;
   padding: 6px;
   margin-bottom: 10px;
-  border: 1px solid #36021fbf;
+  border: 1px solid #000000;
   border-radius: 8px;
-  background-color: #ffffff;
+  background-color: #fff;
+  transition: 0.5s;
+  color: black;
+}
+.popup-content input:hover {
+  transition: 0.5s;
+
+  background-color: #dad9d9;
+}
+.popup-content input:focus {
+  border: 1px solid #4e4e4e;
+  background-color: #dad9d9;
 }
 
 .popup-content input::placeholder {
-  color: #36021f9f;
+  color: rgba(0, 0, 0, 0.795);
+}
+.popup-content form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
 }
 
 .submit-btn {
   width: 100px;
   height: 100px;
-  background: white;
+  background: #fff;
   color: #36021f;
   padding: 10px;
   border-radius: 8px;
@@ -1243,12 +1267,12 @@ table {
 
 .button-submit {
   display: block;
-  margin: 20px auto 0;
+  margin-top: 40px;
   width: 180px;
   height: 50px;
-  background: white;
-  color: #36021f;
-  border: 2px solid #66103f6e;
+  background: #992064;
+  color: #fff;
+  border: 2px solid #992064;
 
   padding: 10px;
   border-radius: 8px;
@@ -1257,16 +1281,23 @@ table {
   transition: 0.3s;
 }
 .button-submit:hover {
+  border-color: #a7226d;
   transition: 0.3s;
-
-  background-color: rgb(197, 195, 195);
+  color: #ffffff;
+  background-color: #a7226d;
+}
+.button-submit:active {
+  transition: 0.1s;
+  transform: scale(0.98);
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
 }
 
 .popup-text {
   line-height: 1.2;
   letter-spacing: -0.04em;
   font-size: 15px;
-  font-weight: 600;
+  font-weight: 400;
+  color: #000;
 }
 
 .popup-main-text {
@@ -1276,5 +1307,6 @@ table {
   font-size: 36px;
   width: 130px;
   margin: 0 auto;
-  padding-bottom: 10px;
+  padding-bottom: 50px;
+  color: #000;
 }
